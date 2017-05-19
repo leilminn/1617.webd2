@@ -10,19 +10,84 @@ html, body {
 body {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-  background: rgba(26,35,126 ,1) url('../assets/images/home.jpg') no-repeat center center fixed;
+  background-image: url("../_img/achtergrond.jpg");
   background-size: cover;
 
-  color: rgba(232,234,246 ,1);
+  color:rgba(232, 234,246 ,1);
+}
+h1 {
+  color:rgb(135,165,30);
+}
+h2 {
+  color: rgb(40,40,40);
+  font-weight: bold;
+  text-decoration:none;
+  font-size: 1em;
+  background-color: rgba(135,165,30,0.75);
+  padding:0.5em;
+  margin-bottom: 0;
+}
+/* header en navigatie
+------------------------- */
+.header_wrapper {
+  background-color: rgb(40,40,40);
+  padding: 1rem;
+  margin-bottom: 2rem;  
 }
 
-.intro {
-  width: 90vw;
+a.company_logo {
+        display:block; /* eerst van de a een block-element maken */
+        width: 90px;
+        height:100px;
+        /* background*/
+        background-image: url("../_img/logo.jpg");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 100% auto;
+        /* magic: tekst laten verdwijnen, door deze naar links op te schuiven */
+        overflow:hidden;
+        text-indent:-999px;
+    }
 
+#main-navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#main-navigation ul>li{
+  float:left;
+}
+#main-navigation a {
+  padding: 10px 20px;
+  color:rgb(135,165,30);
+  font-size: 1.5em;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.portfolio_items img{
+ width:100%;
+}
+
+/* nieuwsbrief
+-------------------------*/
+.nieuwsbrief_wrapper {
+  background-color: rgb(135,165,30);
+  text-align: center;
+}
+
+/* footer
+--------------------------*/
+.footer_wrapper{
+  background-color: rgb(40,40,40);
+  position: relative;
+  text-align: center;
+}
+
+/* inhoud
+--------------------------*/
+.body_wrapper {
+  background-color: rgba(40,40,40,0.5);
   padding: 1rem;
-  margin-top: 1rem;
-
-  background: rgba(41,182,246 ,1);
-  color: rgba(1,87,155 ,1);
+  margin-top: 2rem;
 }
