@@ -10,37 +10,40 @@ html, body {
 body {
   width: 100vw;
   height: 100vh;
-  background-image: url("../_img/achtergrond.jpg");
+  background-image: url("../img/achtergrond.jpg");
+  background-color: rgb(40,40,40);
+  background-repeat: no-repeat;
   background-size: cover;
 
-  color:rgba(232, 234,246 ,1);
+  color:rgba(256, 256,256 ,1);
+  font-weight: normal;
 }
 h1 {
   color:rgb(135,165,30);
-}
-h2 {
-  color: rgb(40,40,40);
   font-weight: bold;
-  text-decoration:none;
-  font-size: 1em;
-  background-color: rgba(135,165,30,0.75);
-  padding:0.5em;
-  margin-bottom: 0;
+  padding-top: 1.5em;
+  font-size: 1.5em;
 }
+
+h3{
+  font-size: 3em;
+  font-weight: bold;
+}
+
+
 /* header en navigatie
 ------------------------- */
 .header_wrapper {
   background-color: rgb(40,40,40);
-  padding: 1rem;
-  margin-bottom: 2rem;  
+  padding: 1em;
 }
 
 a.company_logo {
         display:block; /* eerst van de a een block-element maken */
-        width: 90px;
+        width: 100px;
         height:100px;
         /* background*/
-        background-image: url("../_img/logo.jpg");
+        background-image: url("../img/logo.png");
         background-repeat: no-repeat;
         background-position: 0 0;
         background-size: 100% auto;
@@ -48,25 +51,91 @@ a.company_logo {
         overflow:hidden;
         text-indent:-999px;
     }
+a > div{
+  color: rgba(256, 256,256 ,1);
+  font-size: 1em;
+  background-color: rgba(135,165,30,0.75);
+  padding:0.5em;
+  margin-bottom: 0;
+}
+a:link{
+  text-decoration: none;
+}
+
+a:hover{
+  font-weight: bold;
+}
+a:visited{
+  text-decoration: none;
+}
 
 #main-navigation ul {
   list-style: none;
-  padding: 0;
+  padding-top: 35px;
   margin: 0;
 }
 #main-navigation ul>li{
   float:left;
 }
 #main-navigation a {
+    font-family: 'papyrus', fantasy;
+
   padding: 10px 20px;
   color:rgb(135,165,30);
   font-size: 1.5em;
-  font-weight: 900;
   text-decoration: none;
 }
 
-.portfolio_items img{
- width:100%;
+img{
+width:250px;
+}
+
+td.container > div {
+width: 100%;
+height: 100%;
+overflow: hidden;
+}
+td{
+  height: 168px;
+vertical-align: top;
+padding-left: 3px;
+padding-right: 3px;
+}
+
+table.centerTable{
+  margin: 0px auto;
+}
+
+.content{
+  min-height: calc(100vh - 320px);
+}
+.colours__colour--a {
+    background-color: rgba(135,165,30,1);
+}
+.colours__colour--b {
+    background-color: rgba(0, 0, 0, 1);
+}
+.colours__colour--c {
+    background-color: rgba(40,40,40, 0.75);
+}
+.colours__colour--d {
+    background-color: rgba(40,40,40, 1);
+}
+.colours__colour--e {
+    background-color: rgba(256, 256,256 ,1);
+}
+.colours__colour {
+    border: .25rem solid #FFF;
+    box-shadow: 0 0 1px #000;
+    color: crimson;
+    float: left;
+    height: 5rem;
+    width: 5rem;
+    margin-top: 0.78rem;
+    }
+.colours__colour + .colours__colour {
+    margin-left: 0.78rem;
+    
 }
 
 /* nieuwsbrief
@@ -74,20 +143,85 @@ a.company_logo {
 .nieuwsbrief_wrapper {
   background-color: rgb(135,165,30);
   text-align: center;
+  position: relative;
+  margin-top: 1.5em;
 }
+
+/* detailpagina
+-----------------------*/
+.detailpagina_wrapper{
+padding-top: 50px;
+}
+.text {
+  width: 160px;
+	height: 30px;
+  color: rgb(256, 256,256);
+	border: 2px solid rgb(256, 256,256);
+  border-radius: 8px;
+  background-color: rgb(135,165,30);
+	padding: 5px;
+  margin: 10px 0px;
+}
+.textarea {
+	width: 490px;
+	height: 120px;
+	color: rgb(256, 256,256);
+	border: 2px solid rgb(256, 256,256);
+  border-radius: 8px;
+  background-color: rgb(135,165,30);
+	padding: 5px;
+}
+.email {
+  width: 200px;
+	height: 30px;
+  color: rgb(256, 256,256);
+	border: 2px solid rgb(256, 256,256);
+  border-radius: 8px;
+  background-color: rgb(135,165,30);
+	padding: 5px;
+  margin-top: 10px;
+}
+
+.button {
+  width: 160px;
+	height: 30px;
+  color: rgb(135,165,30);
+	border: 1px solid rgb(135,165,30);
+  border-radius: 8px;
+  background-color: rgb(256, 256,256);
+	padding: 5px;
+  font-size: 1em;
+  font-weight: bold;
+  }
+.button:hover {
+  width: 160px;
+	height: 30px;
+  color: rgb(256,256,256);
+	border: 1px solid rgb(256,256,256);
+  border-radius: 8px;
+  background-color: rgb(135,165,30);
+	padding: 5px;
+  font-size: 1em;
+  font-weight: bold;
+  }
+/*color
+-----------*/
+
 
 /* footer
 --------------------------*/
+.footer{
+  height: 100px;
+}
 .footer_wrapper{
   background-color: rgb(40,40,40);
   position: relative;
   text-align: center;
+  padding: 1.5em;
+  font-size: 0.75em;
 }
-
-/* inhoud
---------------------------*/
-.body_wrapper {
-  background-color: rgba(40,40,40,0.5);
-  padding: 1rem;
-  margin-top: 2rem;
+.sub-navigation {
+  padding: 10px 2px;
+  color:rgba(232, 234,246 ,1);
+  text-decoration: none;
 }
