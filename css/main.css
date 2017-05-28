@@ -175,6 +175,13 @@ table.centerTable{
   margin-top: 10px;
 }
 
+iframe {
+    border-radius: 20px;
+    border: 2px solid rgb(256, 256,256);
+    width: 450px;
+    height: 350px;
+}
+
 /* detailpagina
 -----------------------*/
 .detailpagina_wrapper{
@@ -226,7 +233,7 @@ padding-top: 50px;
 .colours__colour {
     border: .25rem solid #FFF;
     box-shadow: 0 0 1px #000;
-    color: crimson;
+    color: lightgray;
     float: left;
     height: 5rem;
     width: 5rem;
